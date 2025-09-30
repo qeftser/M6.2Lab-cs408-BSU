@@ -1,29 +1,24 @@
-# web-dev-starter
+# M 6.2 Lab Caleb Pollock
 
-This is a starter project for web development with no frameworks and minimal
-dependencies. It is intended to be a starting point for web development projects
-that are written in plain HTML, CSS, and JavaScript.
+## Usage
 
-## Getting Started
+Because this project is using javascript, packages should be installed before running:
 
-To get started, clone this repository and run the following commands:
-
-```bash
-npm install
 ```
-This will install the necessary dependencies for the project.
-
-## Development
-
-It is recommended to use the VSCode Live Server extension to run the project
-locally. This will allow you to see changes in real-time as you make them. There
-is no need to run a build process or refresh the page manually. Additionally,
-you do not need to setup a local server to run the project.
-
-## Testing
-
-To run the tests for the project, run the following command:
-
-```bash
-npm test
+npm install 
 ```
+
+You can either view the website through the vscode live preview plugin or by using
+a web browser and opening the index.html file.
+
+## Discussion
+
+This project was nice in that we had a little more freedom to get things done. I
+feel like I got close to the example, but only if you view the webpage in half
+size. This is alright I guess, as it is meant to be a letter that is more that
+format. Using random text is a nice way to do things. It allows me to focus
+on the layout and those kind of things without thinking about the text.    
+    
+I have the label tags for my radio buttons and used the correct tags for 
+what I think is everything so this website should be pretty accessable. 
+Not much is happening so it wasn't that bad this time.

@@ -1,108 +1,124 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fancy letterheaded paper</title>
+    
+  </head>
+  <body>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+    <article>
+      <h1>Awesome<br>Company</h1>
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
 
-  <label id="result">Result:</label>
+      <h2 class="main-title">Title of letter</h2>
+      <hr>
 
-  <hr>
+      <section>
+         <div class="column1">
+            <h2>Subheader 1</h2>
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+               Phasellus tincidunt ultrices ex nec ornare. Nam vitae bibendum
+               nunc. In hac habitasse platea dictumst. Etiam malesuada id
+               ipsum in commodo. Sed quis vehicula massa. Vivamus ac hendrerit
+               purus. Quisque luctus neque in varius hendrerit. Cras vulputate
+               risus eu felis lobortis, ac pharetra nisi interdum. Praesent
+               sed orci sit amet felis vestibulum aliquam. Proin enim libero,
+               malesuada in mauris eget, lobortis fringilla nisi. 
+            </p>
 
-  <hr>
-  <button id="jokeButtonTable">Get a  5 Random Jokes</button>
-  <table id="jokeTable"></table>
+            <h2>Subheader 2</h2>
 
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke, fetch5RandomJokes} from './js/main.js';
+            <p>
+               Quisque odio felis, ultrices vitae nibh eu, sollicitudin
+               gravida elit. Duis maximus scelerisque nunc at hendrerit.
+               Mauris vel suscipit dui. Praesent tincidunt, felis sit amet
+               tincidunt ullamcorper, lorem quam pretium lorem, quis finibus
+               felis diam ac quam. Pellentesque iaculis nibh a fringilla
+               imperdiet. Quisque eu ornare est. Nunc ut tortor egestas,
+               congue felis et, dictum massa. Sed nulla ante, faucibus vitae
+               sem nec, gravida pellentesque ante. Pellentesque eget libero
+               quam. Phasellus consectetur risus ut interdum rutrum. Duis 
+               nisi odio, malesuada a leo quis, imperdiet condimentum arcu.
+               Nam tempus ut tortor eu porta. Vivamus imperdiet viverra
+               viverra. Curabitur sit amet augue sit amet libero consectetur
+               egestas a vitae ante. 
+            </p>
 
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
+            <p>
+               Curabitur tristique magna magna, vel condimentum dolor
+               semper vel. Curabitur a turpis mi. Donec scelerisque leo
+               in varius finibus. Fusce euismod volutpat malesuada. Maecenas
+               aliquet nisl et turpis gravida, et porttitor tellus consequat.
+               Nunc at lorem ac turpis congue congue. Nullam sed metus
+               consectetur, feugiat magna quis, interdum risus. Duis eget
+               nibh dolor. Cras eget molestie neque. Pellentesque laoreet
+               enim est, sed porttitor tellus porttitor et. Sed pulvinar
+               mi et turpis commodo iaculis. 
+            </p>
+         </div>
 
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
+         <div class="column2">
+            <h2>Subheader 3</h2>
 
-    });
+            <p>
+               Quisque condimentum felis sit amet placerat rutrum.
+               Suspendisse potenti. Cras ligula risus, efficitur ut arcu
+               eu, scelerisque rutrum lectus. Donec nibh nisl, blandit
+               sit amet nulla in, suscipit venenatis odio. Nullam turpis
+               sapien, accumsan id varius nec, placerat eu erat. In hac
+               habitasse platea dictumst. Duis velit neque, condimentum
+               at fermentum id, pretium nec lectus. In porttitor semper
+               velit, ut tincidunt urna facilisis id. 
+            </p>
 
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
+            <h2>Subheader 4</h2>
 
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches 5 random jokes from an API
-    // and displays them in a table on the page
-    const jokeTableBtn = document.getElementById('jokeButtonTable');
-    const jokeTable = document.getElementById('jokeTable');
-    jokeTableBtn.addEventListener('click', async () => {
-      try {
-        jokeTable.textContent = 'Loading...';
-        const joke = await fetch5RandomJokes();
-        jokeTable.innerHTML = `
-              <thead>
-              <tr>
-                <th>Joke</th>
-              </tr>
-              </thead>
-              <tbody>
-              ${joke.map(j => `<tr><td>${j}</td></tr>`).join('')}
-              </tbody>
-            `;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
+            <p>
+               Nulla sed volutpat risus, in iaculis lectus. Ut vitae
+               facilisis ante. Nam eleifend orci vel risus ullamcorper,
+               eu molestie erat venenatis. Proin varius ullamcorper
+               efficitur. Sed imperdiet, est at feugiat lobortis, ante
+               mi maximus justo, eu ultrices urna ante at urna. Duis
+               fermentum vehicula suscipit. Sed congue nulla sem,
+               ac tristique elit maximus feugiat. Nulla vulputate cursus
+               enim nec vulputate. Vestibulum ipsum ipsum, feugiat nec
+               ipsum id, laoreet iaculis nisi. Vestibulum quis ipsum libero.
+               Donec in molestie dui. Nam sodales ultricies metus ac tempor.
+               Suspendisse maximus eros risus, in cursus metus varius et.
+               Donec convallis vestibulum nulla eget placerat. 
+            </p>
 
-</body>
+            <h2>Alert Selector</h2>
+            <p style="text-align: center">
+               <input type="radio" id="opt0" name="options" value="OPTION 1" checked="checked">
+               <label for="opt0">option 1</label><br>
+               <input type="radio" id="opt1" name="options" value="OPTION 2">
+               <label for="opt1">option 2</label><br>
+               <input type="radio" id="opt2" name="options" value="OPTION 3">
+               <label for="opt2">option 3</label> 
+            </p>
+            <p style="text-align: center">
+               <button class="opt_display">Display value</button>
+            </p>
 
+         </div>
+      </section>
+
+      <address>
+        <p>The Awesome Company</p>
+        <p>102-112 Frail Bend Bridge<br>
+        The Dwindlings<br>
+        Little Hornet<br>
+        HX3 9ZQ<br>
+        UK</p>
+      </address>
+    </article>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
