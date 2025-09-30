@@ -22,3 +22,12 @@ on the layout and those kind of things without thinking about the text.
 I have the label tags for my radio buttons and used the correct tags for 
 what I think is everything so this website should be pretty accessable. 
 Not much is happening so it wasn't that bad this time.
+
+## Sources
+
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/border-style
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/background
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
+ * www.w3schools.com/tags/att_input_type_radio.asp
+ * https://stackoverflow.com/questions/15839169/how-to-get-the-value-of-a-selected-radio-button
